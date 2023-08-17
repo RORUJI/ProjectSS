@@ -10,6 +10,16 @@ app.get('/hello/:name', function (req,res) {
     res.send('sey hello with ' + req.params.name)
 })
 
+// get user by id
+app.get('/user/:userId', function (req, res) {
+    res.send('ดูข้อมูลผู้ใช้')
+})
+
+//get all user
+app.get('/users', function (req, res) {
+    res.send('เรียกข้อมูล ผู้ใช้งานทั้งหมด')
+})
+
 let port = 8081
 
 app.listen(port, function () {
