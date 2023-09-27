@@ -2,10 +2,12 @@ const UserController = require('./controllers/UserController')
 
 module.exports = (app) => {
     /* RESFUL Api dor users management */
+    
+     // get all user
+    app.get('/users',UserController.index)
+    
     // create user
-    app.post('/user',
-        UserController.create
-    )
+    app.post('/user',UserController.create)
 
     // edit user, suspend, active
     app.put('/user/:userId',UserController.put)
@@ -16,6 +18,4 @@ module.exports = (app) => {
     // get user by id
     app.get('/user/:userId',UserController.show)
 
-    // get all user
-    app.get('/users',UserController.index)
 }
