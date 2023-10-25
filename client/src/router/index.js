@@ -2,35 +2,35 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 //Users
-import UserIndex from '@/components/Users/Index'
-import UserCreate from '@/components/Users/CreateUser'
-import UserEdit from '@/components/Users/EditUser'
-import UserShow from '@/components/Users/ShowUser'
+
+import HospitalIndex from '@/components/Hospitals/Index'
+import HospitalCreate from '@/components/Hospitals/CreateHospital'
+import HospitalEdit from '@/components/Hospitals/EditHospital'
+import HospitalShow from '@/components/Hospitals/ShowHospital'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/users',
-      name: 'users',
-      component: UserIndex
-    },
-    {
-      path: '/user/create',
-      name: 'users-create',
-      component: UserCreate
-    },
-    {
-      path: '/user/edit/:userId',
-      name: 'users-edit',
-      component: UserEdit
-    },
-    {
-      path: '/user/:userId',
-      name: 'user',
-      component: UserShow
-    },
-    
-  ]
+    routes: [{
+            path: '/hospitals',
+            name: 'hospitals',
+            component: HospitalIndex
+        },
+        {
+            path: '/hospital/create',
+            name: 'hospitals-create',
+            component: HospitalCreate
+        },
+        {
+            path: '/hospital/edit/:hospitalId',
+            name: 'hospitals-edit',
+            component: HospitalEdit
+        },
+        {
+            path: '/hospital/:hospitalId',
+            name: 'hospital',
+            component: HospitalShow
+        },
+
+    ]
 })
