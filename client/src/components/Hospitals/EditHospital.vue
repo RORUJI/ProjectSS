@@ -1,14 +1,18 @@
 <template>
-    <div>
-        <h1>Edit Hospital</h1>
-        <form v-on:submit.prevent = "editHospital">
-            <p>ชื่อโรงพยาบาล: <input type="text" v-model="hospital.name"></p>
-            <p>ราคา: <input type="text" v-model="hospital.price"></p>
-            <p>ขนาดห้อง: <input type="text" v-model="hospital.room_size"></p>
-            <p>ขนาดเตียง: <input type="text" v-model="hospital.bed_size"></p>
-            <p>ประเภทห้อง: <input type="text" v-model="hospital.type"></p>
-            <p><button type="submit">Edit Hospital</button></p>
-        </form>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <h1 class="d-flex justify-content-center">Edit Hospital</h1>
+            <div style="border: solid 1px; border-radius: 10px; padding-top: 2vh; background-color:rgb( 255, 217, 217);">
+                <form v-on:submit.prevent = "editHospital">
+                    <p class="d-flex justify-content-center input-group input-group-sm mb-3">ชื่อโรงพยาบาล: <input class="form-control" type="text" v-model="hospital.name"></p>
+                    <p class="d-flex justify-content-center input-group input-group-sm mb-3">ราคา: <input class="form-control" type="text" v-model="hospital.price"></p>
+                    <p class="d-flex justify-content-center input-group input-group-sm mb-3">ขนาดห้อง: <input class="form-control" type="text" v-model="hospital.room_size"></p>
+                    <p class="d-flex justify-content-center input-group input-group-sm mb-3">ขนาดเตียง: <input class="form-control" type="text" v-model="hospital.bed_size"></p>
+                    <p class="d-flex justify-content-center input-group input-group-sm mb-3">ประเภทห้อง: <input class="form-control" type="text" v-model="hospital.type"></p>
+                    <p class="d-flex justify-content-center input-group input-group-sm mb-3"><button class="btn btn-warning form-control" type="submit">Edit Hospital</button></p>
+                </form>
+            </div>
+        </div>
     </div>
 </template>
 <script>
